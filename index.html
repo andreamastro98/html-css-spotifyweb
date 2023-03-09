@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="assets/style/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Spotify</title>
+    <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico">
 </head>
 
 <body>
@@ -22,7 +23,7 @@
                     <img src="assets/img/logo-small.svg" alt="">
                 </div>
 
-                <div class="row-sidebar">
+                <div class="row-sidebar border-left-green">
                     <a href="#">
                         <img src="assets/img/home.svg" alt="">
                         <span>Home</span>
@@ -106,14 +107,146 @@
 
         <!-- body spotify -->
         <div class="spoty-body">
+            <!-- upgrade bar -->
             <div class="upgrade-div">
                 <a href="#" class="upgrade-btn">EFFETTUA L'UPGRADE</a>
             </div>
+            <!-- generi bar -->
+            <div id="generi">
+                <a href="#">IN EVIDENZA</a>
+                <a href="#">PODCAST</a>
+                <a href="#">CLASSIFICHE</a>
+                <a href="#">GENERI E MOOD</a>
+                <a href="#">NUOVE USCITE</a>
+                <a href="#">SCOPRI</a>
+            </div>
+            <div class="container">
+
+                <!-- recently played -->
+                <h2 class="title-section">Recently played</h2>
+                <div id="recently-played">
+                    <div class="card">
+                        <div class="img-icon">
+                            <img src="assets/img/metal_lifting.jpg" alt="">
+                            <a href="#">
+                                <i class="fa-regular fa-circle-play"></i>
+                            </a>                            
+                        </div>                        
+                        <h3>Heavy Metal</h3>
+                        <h4>Subtitle</h4>
+                    </div>
+
+                    <div class="card">
+                        <div class="img-icon">
+                            <img src="assets/img/stranger.jpeg" alt="">
+                            <a href="#">
+                                <i class="fa-regular fa-circle-play"></i>
+                            </a>
+                        </div>               
+                        <h3>Stranger Things, Vol.1 (a Netflix Original Series Soundtrack)</h3>
+                        <h4>Kyle Dixon & Michael Stein</h4>
+                    </div>
+
+                    <div class="card">
+                        <div class="img-icon">
+                            <img src="assets/img/aquietplace.jpeg" alt="">
+                            <a href="#">
+                                <i class="fa-regular fa-circle-play"></i>
+                            </a>
+                        </div>               
+                        <h3>A quiet place</h3>
+                        <h4>Subtitle</h4>
+                    </div>
+
+                    <div class="card">
+                        <div class="img-icon">
+                            <img src="assets/img/split.jpeg" alt="">
+                            <a href="#">
+                                <i class="fa-regular fa-circle-play"></i>
+                            </a>
+                        </div>               
+                        <h3>Split</h3>
+                        <h4>Subtitle</h4>
+                    </div>
+
+                    <div class="card">
+                        <div class="img-icon">
+                            <img src="assets/img/cure.jpeg" alt="">
+                            <a href="#">
+                                <i class="fa-regular fa-circle-play"></i>
+                            </a>
+                        </div>               
+                        <h3>A cure for wellness</h3>
+                        <h4>Subtitle</h4>
+                    </div>
+
+                    <div class="card">
+                        <div class="img-icon">
+                            <img src="assets/img/sinister.jpeg" alt="">
+                            <a href="#">
+                                <i class="fa-regular fa-circle-play"></i>
+                            </a>
+                        </div>    
+                        <h3>Sinister</h3>
+                        <h4>Subtitle</h4>
+                    </div>
+                </div>
+
+                <!-- Created for u -->
+                <h2 class="title-section">Creato per Andrea Mastrovito</h2>
+                <h3 class="title-section-2">Piú ascolti, piú saranno accurati i suggerimenti</h3>
+                <div id="suggested-for-u">
+                    <div class="card">
+                        <div class="img-icon">
+                            <img src="assets/img/radar.jpeg" alt="">
+                            <a href="#">
+                                <i class="fa-regular fa-circle-play"></i>
+                            </a>
+                        </div>      
+                        <h3>Realease Radar</h3>
+                    </div>
+
+                    <div class="card">
+                        <div class="img-icon">
+                            <img src="assets/img/mixdaily.jpeg" alt="">
+                            <a href="#">
+                                <i class="fa-regular fa-circle-play"></i>
+                            </a>
+                        </div>    
+                        <h3>Realease Radar</h3>
+                    </div>
+                </div>
+
+                <!-- Most popular artists -->
+                <h2 class="title-section">Creato per Andrea Mastrovito</h2>
+                <h3 class="title-section-2">Piú ascolti, piú saranno accurati i suggerimenti</h3>
+                <div id="most-popular-artists">
+                    <div class="card">
+                        <div class="img-icon">
+                            <img src="assets/img/einaudi.jpeg" alt="">
+                            <a href="#">
+                                <i class="fa-regular fa-circle-play"></i>
+                            </a>
+                       </div>     
+                        <h3>Ludovico Einaudi</h3>
+                    </div>
+
+                    <div class="card">
+                        <div class="img-icon">
+                            <img src="assets/img/youg.jpeg" alt="">
+                            <a href="#">
+                                <i class="fa-regular fa-circle-play"></i>
+                            </a>
+                        </div>
+                        <h3>Lana del Rey</h3>
+                    </div>
+                </div>
+            </div>            
         </div>
 
 
 
-
+        <!-- sezione player musicale -->
         <div class="player">
             <div id="bottom-col-left">
                 <img src="assets/img/Green_Day.jpg" alt="">
@@ -177,8 +310,6 @@
                 </div>    
             </div>
         </div>
-    </div>
-
-    
+    </div>    
 </body>
 </html>
