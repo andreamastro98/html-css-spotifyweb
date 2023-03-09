@@ -27,6 +27,7 @@ body{
     height: calc(100% - 80px);
     width: 200px;
     color: white;
+    font-size: 14px;
 }
 
 .box-1-sidebar{
@@ -69,6 +70,10 @@ body{
 
 .row-sidebar{
     opacity: 0.8;
+}
+
+.row-sidebar:hover{
+    opacity: 1;
 }
 
 #profile{
@@ -119,18 +124,20 @@ body{
 .spoty-body{
     height: calc(100% - 80px);
     width: calc(100% - 200px);
-    background-color: cadetblue;
+    background-color: #151922;
 }
 
 .upgrade-div{
-    width: 100%;
+    width: calc( 100% - 200px);
+    position: fixed;
+    top: 0;
     text-align: end;
     background-color: #080b12;
     padding-top: 2rem;
     padding-bottom: 2rem;
 }
 
-.upgarde-btn{
+.upgrade-btn{
     background-color: #080b12;
     border: 1px solid white;
     color: white;
@@ -147,9 +154,135 @@ body{
 
 
 .player{
+    display: flex;
+    align-items: center;
     width: 100%;
     height: 80px;
-    background-color: gray;
+    background-color: #282828;
+    justify-content: space-between;
+    z-index: 1;
+}
+
+#bottom-col-left{
+    display: flex;
+    align-items: center;
+    height: 100%;
+    width: 25%;
+}
+
+#bottom-col-left img{
+    height: 65%;
+    margin-right: 0.7rem;
+    margin-left: 0.7rem;
+}
+
+#info-brano span{
+    display: block;
+    font-size: 12px;
+    font-weight: bold;
+    color: white;
+}
+
+#info-brano :last-child{
+    opacity: 0.5;
+    font-size: 11px;
+}
+
+.icon-brano a{
+    color: white;
+    opacity: 0.5;
+    padding-left: 2rem;
+    text-decoration: none;
+    display: block;
+}
+
+.icon-brano a i{
+    padding-right: 0.6rem;
+}
+
+.icon-brano a:hover{
+    opacity: 1;
+}
+
+#bottom-col-center{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    align-items: center;
+}
+
+.bottom-col-center-top{
+    align-items: center;
+    display: flex;
+}
+
+.bottom-col-center-top a i{
+    padding-left: 1rem;
+    padding-bottom: 1rem;
+    color: white;
+    font-size: 1.2rem;
+}
+
+.bottom-col-center-top a:nth-child(3) i{
+    font-size: 1.7rem;
+    padding-left: 1.2rem;
+    padding-right: 1.2rem;
+}
+
+.bottom-col-center-top a:nth-child(4) i{
+    padding-left: 0;
+}
+
+.bottom-col-center-bottom{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+}
+
+.bottom-col-center-bottom span{
+    padding-left: 1rem;
+    padding-right: 1rem;
+    font-size: 11px;
+    color: white;
+}
+
+#player-bar-grey{
+    width: 40%;
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 20px;
+    height: 4px;
+}
+
+#player-bar-white{
+    width: 20%;
+    background-color: rgba(255, 255, 255, 0.7);
+    height: 4px;
+    border-radius: 20px;
+}
+
+#bottom-col-right{
+    display: flex;
+    align-items: center;
+    width: 25%;
+    justify-content: end;
+}
+
+#bottom-col-right a{
+    text-decoration: none;
+    color: white;
+}
+
+#bottom-col-right a i{
+    padding-right: 0.5rem;
+}
+
+#volume{
+    width: 40%;
+}
+
+#volume #player-bar-grey{
+    width: 80%;
 }
 
 /******************************
@@ -209,12 +342,83 @@ body{
         width: 60%;
     }
 
+    .upgrade-div{
+        width: calc(100% - 50px);
+    }
+
+    #bottom-col-left{
+        width: 25%;
+    }
+
+    #bottom-col-center{
+        width: 60%;
+    }
+
+    #bottom-col-right{
+        width: 15%;
+    }
+
+    .icon-brano a{
+        padding-left: 0;
+    }
+
+    #bottom-col-left img{
+        height: 35%;
+        margin-right: 0.1rem;
+    }
+
+    #info-brano span{
+        font-size: 9px;
+    }
+
+    #info-brano :last-child{
+        font-size: 7px;
+    }
+
+    .bottom-col-center-bottom span{
+        padding-left: 0.2rem;
+        padding-right: 0.2rem;
+        font-size: 9px;
+    }
+
+    .bottom-col-center-top a i{
+        padding-left: 0.5rem;
+        font-size: 1rem;
+    }
+
+    .bottom-col-center-top a:nth-child(3) i{
+        padding-left: 0.7rem;
+        padding-right: 0.7rem;
+        font-size: 1.5rem;
+    }
+}
+
 /********** Tablet S ***********/
 @media screen and (max-width: 768px){
+    #bottom-col-left{
+        width: 33%;
+    }
 
+    #bottom-col-center{
+        width: 33%;
+    }
+
+    #bottom-col-right{
+        width: 33%;
+    }
 }
 
 /********** Tablet L ***********/
 @media screen and (max-width: 1024px){
+    #volume{
+        display: none;
+    }
 
+    #bottom-col-right a:nth-child(3){
+        display: none;
+    }
+
+    #bottom-col-right{
+        justify-content: end;
+    }
 }
